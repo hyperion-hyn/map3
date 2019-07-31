@@ -7,7 +7,7 @@ A script to deploy Map3 natively on linux.
 https://github.com/hyperion-hyn/docker-map3/
 
 ## caddy
-a map3 service node program based on [caddy](https://github.com/caddyserver/caddy).
+a map3 service node program based on [caddy](https://github.com/caddyserver/caddy). Modification on the branch Map3
 
 It will integrate keyless, p2p, micropayment, integrity validation and etc in the future.
 
