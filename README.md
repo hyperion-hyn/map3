@@ -18,7 +18,7 @@ a plugin for caddy to support time-based job schedule.
 
 https://github.com/hyperion-hyn/caddy-cron
 
-## getstat
+## geostat
 
 analyze access logs and ingest results into influxdb.
 
@@ -30,6 +30,6 @@ Custom ouroboros to auto update Map3 nodes
 
 https://github.com/hyperion-hyn/ouroboros
 
-## mapbox gl failover
+## mapbox gl p2p plug-in failover
 a library to enable [mapbox-js](https://docs.mapbox.com/mapbox-gl-js/api/) to use map3 service network.
 
