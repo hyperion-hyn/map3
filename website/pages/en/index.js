@@ -14,7 +14,7 @@ const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
 /* Map3 Components */
-const Carousel = require(`${process.cwd()}/core/Carousel.js`);
+// const Carousel = require(`${process.cwd()}/core/Carousel.js`);
 
 class Index extends React.Component {
     render() {
