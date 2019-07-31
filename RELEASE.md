@@ -8,12 +8,12 @@ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(
 
 ## Generate release notes
 
-Example Commit: https://github.com/angular/angular.js/commit/7ab5098c14ee4f195dbfe2681e402fe2dfeacd78
+Example Commit: https://github.com/hyperion-hyn/caddy/commit/ff5026a921e4d365a12d51e893014a0b52c8417b
 
 1) Run
 
 ```bash
-git log master..keyless --pretty=format:'[%H]%s' --reverse -v <new version> <base branch> | grep -v Merge > changes.md
+git log master..map3 --pretty=format:'[%H]%s' --reverse -v <new version> <base branch> | grep -v Merge > changes.md
 ```
 
 2) Review the generated file and manually fix typos, group and reorder stuff if needed.
