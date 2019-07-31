@@ -1,0 +1,15 @@
+{
+  "docs": {
+    "Technical Details": [],
+    "Operator": ["install", "cli", "deploy-docker", "deploy-ali", "deploy-aws"],
+    "Service User": ["open-data", "data-api", "mapstore"],
+    "Content Provider": ["publish-map"],
+    "Developers": ["developers", "contributing", "release"]
+  },
+  "about":{
+    "About": ["what-is", "why-map3", "data-ver"],
+    "Governance": ["code-of-conduct", "governance"],
+    "Legal": ["terms-of-service", "privacy"],
+    "Misc": ["faq"]
+  }
+}
