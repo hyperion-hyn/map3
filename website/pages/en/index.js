@@ -180,9 +180,10 @@ class Index extends React.Component {
             const testimonials = siteConfig.testimonials
                 .map(testimonial => (
                     <span>
-                        <strong className="author">{testimonial.author}, </strong>
+                        <p className="content">"{testimonial.content}"</p>
+                        <strong className="author">- {testimonial.author}, </strong>
                         <small className="source">{testimonial.source}</small>
-                        <p className="content">{testimonial.content}</p>
+                        <p></p>
                     </span>
                 ));
 

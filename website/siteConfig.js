@@ -53,7 +53,7 @@ const testimonials = [
         author: "Lianghong Fei",
         source: "AWS chief technology advisor"
     },{
-        content: "Building on the empowered edge is the right direction for Map3. A decentralized and consensus driven network of edges can bring new paradigm to maps",
+        content: "A decentralized and consensus driven network of edges can bring a new paradigm to maps",
         author: "Zhi Wang",
         source: "General Manager of JD Cloud"
     }

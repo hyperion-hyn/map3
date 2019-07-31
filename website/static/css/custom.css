@@ -88,12 +88,14 @@
 
 .testimonialSection {
     padding: 80px;
-    margin: auto;
+    /*display: flex;*/
+    text-align: center;
 }
 
 .testimonialSection .content {
     font-family: "Open Sans", "Trebuchet MS", sans-serif;
     font-size: 16px;
+    margin: 0px;
 }
 
 .testimonialSection .author {
