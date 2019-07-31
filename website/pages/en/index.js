@@ -13,6 +13,9 @@ const CompLibrary = require('../../core/CompLibrary.js');
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
+/* Map3 Components */
+const Carousel = require(`${process.cwd()}/core/Carousel.js`);
+
 class Index extends React.Component {
     render() {
         const {config: siteConfig, language = ''} = this.props;
@@ -176,6 +179,7 @@ class Index extends React.Component {
                 <div className="mainContainer">
                     <Tldr/>
                     <Experience/>
+                    {/*<Carousel/>*/}
                     <Showcase/>
                 </div>
             </div>

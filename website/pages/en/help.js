@@ -44,6 +44,7 @@ function Help(props) {
             <h1>Need help?</h1>
           </header>
           <p>This project is maintained by a dedicated group of people.</p>
+            <p>Should you have any questions, feel free to email us at <a href="mailto: map3@hyn.space">map3@hyn.space</a></p>
           <GridBlock contents={supportLinks} layout="threeColumn" />
         </div>
       </Container>
