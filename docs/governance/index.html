@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Governance · Map3</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;This document aims to clarify how decisions of Map3 are made and how various&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Governance · Map3"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.map3.network//"/><meta property="og:description" content="&lt;p&gt;This document aims to clarify how decisions of Map3 are made and how various&lt;/p&gt;
+"/><meta property="og:image" content="https://www.map3.network/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.map3.network/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="Map3"/><h2 class="headerTitleWithLogo">Map3</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/what-is" target="_self">About</a></li><li class=""><a href="/docs/install" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Governance</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/what-is">Map Chronology</a></li><li class="navListItem"><a class="navItem" href="/docs/why-map3">Map3 Vision</a></li><li class="navListItem"><a class="navItem" href="/docs/data-ver">Data Verification Model</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Governance</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/code-of-conduct">Code Of Conduct</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/governance">Governance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Legal</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/terms-of-service">Terms of Service</a></li><li class="navListItem"><a class="navItem" href="/docs/privacy">Privacy</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Misc</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/faq">FAQ</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/hyperion-hyn/map3/edit/master/docs/governance.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Governance</h1></header><article><div><span><p>This document aims to clarify how decisions of Map3 are made and how various
+stakeholders of our community interact with each other, including the relationship
+between open source collaborative developments and other efforts that may be funded by
+for-profit or non-profit entities. The Software developed by The Project is released
+under the Apache License 2.0 (or similar) open source license, developed openly and hosted
+in public GitHub repositories under the <a href="https://github.com/hyperion-hyn">Hyperion GitHub organization</a>.
+Examples of Project Software include Map3, Map3 Edge, Map3 Edge Dashboard etc.</p>
+<h2><a class="anchor" aria-hidden="true" id="map3-governance"></a><a href="#map3-governance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Map3 Governance</h2>
+<h3><a class="anchor" aria-hidden="true" id="the-project"></a><a href="#the-project" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Project</h3>
+<p>The Map3 Project (The Project) is an open source software project. The goal of The Project is to develop open source software and deploy open and public service nodes and services for decentralized and autonomous
+mapping and map services. The Services run by the Project consists of public websites and node-services
+hosted under the *map3.network domain.</p>
+<p>The Project is developed by a distributed team of developers, called Contributors.
+Contributors are individuals who have contributed code, documentation, designs, user support,
+or other work to one or more Project repositories. Anyone can be a Contributor.
+Contributors can be affiliated with any legal entity or none. Contributors participate in the
+project by submitting, reviewing and discussing GitHub Pull Requests and Issues and participating
+in open and public Project discussions on GitHub, Stack Overflow, Telegram chat rooms, and mailing lists.
+The foundation of Project participation is openness and transparency.</p>
+<p>The Project Community consists of all Contributors and Users of the Project.
+Contributors work on behalf of and are responsible to the larger Project Community and
+we strive to keep the barrier between Contributors and Users as low as possible. In the scope of Map3,
+Users include Node Operators, Content Providers and Service Users.</p>
+<h3><a class="anchor" aria-hidden="true" id="governance"></a><a href="#governance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Governance</h3>
+<p>This section describes the governance and leadership model of The Project.</p>
+<p>The foundations of Project governance are:</p>
+<ul>
+<li>Openness &amp; Transparency</li>
+<li>Active Contribution</li>
+<li>Institutional Neutrality</li>
+</ul>
+<p>The Project leadership is provided by a designated subset of Contributors called Core Developers, whose
+active and consistent contributions are recognized by their receiving ownership rights over the GitHub organization.
+In general, all Project decisions are made through consensus among the Core Developers with input from the
+Community. The Core Developers in other words will also be the Steering Council of the Project.</p>
+<h3><a class="anchor" aria-hidden="true" id="steering-council"></a><a href="#steering-council" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Steering Council</h3>
+<p>The Project will have a Steering Council that consists of Project Contributors who have
+produced contributions that are  substantial in quality  and quantity, and sustained over
+at least one year. The Council consists of the owners of the project organization as well.
+The overall role of the Council is to ensure, through consensus and taking input from the
+Community, the long-term well-being of the project, both technically and as a community.</p>
+<p>During the everyday project activities, members participate in all
+discussions, code review and other project activities as peers with all other
+Contributors and the Community. In these everyday activities, Members
+do not have any special power or privilege through their membership on the
+Council. However, it is expected that because of the quality and quantity of
+their contributions and their expert knowledge of the Project Software and
+Services that Council members will provide useful guidance, both technical and
+in terms of project direction, to potentially less experienced contributors.</p>
+<p>The Council and its members play a special role in certain situations.
+In particular, the Council may:</p>
+<ul>
+<li>Make decisions about the overall scope, vision and direction of the
+project.</li>
+<li>Make decisions about strategic collaborations with other organizations or
+individuals.</li>
+<li>Make decisions about specific technical issues, features, bugs and pull
+requests. They are the primary mechanism of guiding the code review process
+and merging pull requests.</li>
+<li>Make decisions about the Services that are run by The Project and manage
+those Services for the benefit of the Project and Community.</li>
+<li>Make decisions when regular community discussion doesn’t produce consensus
+on an issue in a reasonable time frame.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="council-membership"></a><a href="#council-membership" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Council Membership</h3>
+<p>To become eligible for being a Steering Council Member, an individual must be a
+Project Contributor who has produced contributions that are substantial in
+quality and quantity, and sustained over at least one year. Potential Council Members
+are nominated by existing Council members and voted upon by the existing members after asking
+if the potential Developer is interested and willing to serve in that capacity.</p>
+<p>When considering potential Members, the Council will look at candidates with a
+comprehensive view of their contributions. This will include but is not limited
+to code, code review, infrastructure work, mailing list and chat participation,
+community help/building, education and outreach, design work, etc. We are
+deliberately not setting arbitrary quantitative metrics (like “100 commits in
+this repo”) to avoid encouraging behavior that plays to the metrics rather than
+the project’s overall well-being. We want to encourage a diverse array of
+backgrounds, viewpoints and talents in our team, which is why we explicitly do
+not define code as the sole metric on which council membership will be
+evaluated.</p>
+<p>If a Council Member becomes inactive in the project for a period of one year,
+they will be considered for removal from the Council. Before removal, inactive
+Member will be approached by one of the Core Developers to see if they plan on returning to
+active participation. If not they will be removed immediately upon a Council
+vote. If they plan on returning to active participation soon, they will be
+given a grace period of one year. If they don’t return to active participation
+within that time period they will be removed by vote of the Council without
+further grace period. All former Council members can be considered for
+membership again at any time in the future, like any other Project Contributor.
+Retired Council members will be listed on the project website, acknowledging
+the period during which they were active in the Council.</p>
+<p>The Council reserves the right to eject current Members,
+if they are deemed to be actively harmful to the project’s well-being, and
+attempts at communication and conflict resolution have failed.</p>
+<h3><a class="anchor" aria-hidden="true" id="conflict-of-interest"></a><a href="#conflict-of-interest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conflict of interest</h3>
+<p>It is expected that the Council Members will be employed at a wide
+range of companies, universities and non-profit organizations. Because of this,
+it is possible that Members will have conflict of interests. Such conflict of
+interests include, but are not limited to:</p>
+<ul>
+<li>Financial interests, such as investments, employment, or contracting work,
+outside of The Project that may influence their work on The Project.</li>
+<li>Access to proprietary information of their employer that could potentially
+leak into their work with the Project.</li>
+<li>An issue where the person privately gains an advantage from The Project
+resources, but The Project has no gain or suffers a disadvantage.</li>
+</ul>
+<p>All members of the Council, shall disclose to the rest of the
+Council any conflict of interest they may have. Members with a conflict of
+interest in a particular issue may participate in Council discussions on that
+issue, but must recuse themselves from voting on the issue.</p>
+<h3><a class="anchor" aria-hidden="true" id="private-communications-of-the-council"></a><a href="#private-communications-of-the-council" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Private communications of the Council</h3>
+<p>Unless specifically required, all Council discussions and activities will be
+public and done in collaboration and discussion with the Project Contributors
+and Community. The Council will have a private mailing list that will be used
+sparingly and only when a specific matter requires privacy. When private
+communications and decisions are needed, the Council will do its best to
+summarize those to the Community after eliding personal/private/sensitive
+information that should not be posted to the public internet.</p>
+<h3><a class="anchor" aria-hidden="true" id="subcommittees"></a><a href="#subcommittees" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Subcommittees</h3>
+<p>The Council can create subcommittees that provide leadership and guidance for
+specific aspects of the project. Like the Council as a whole, subcommittees
+should conduct their business in an open and public manner unless privacy is
+specifically called for. Private subcommittee communications should happen on
+the main private mailing list of the Council unless specifically called for.</p>
+<h3><a class="anchor" aria-hidden="true" id="changing-the-governance-documents"></a><a href="#changing-the-governance-documents" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changing the Governance Documents</h3>
+<p>Changes to the governance documents are submitted via a GitHub pull
+request to The Project's governance document on GitHub. The pull request
+is then refined in response to public comment and review, with the goal
+being consensus in the community.  After this open period, a Steering Council
+Member proposes to the Steering Council that the changes be ratified and the
+pull request merged (accepting the proposed changes) or proposes that the pull
+request be closed without merging (rejecting the proposed changes). The Member
+should state the final commit hash in the pull request being proposed for acceptance
+or rejection and briefly summarize the pull request. A minimum of 80% of the
+Steering Council must vote and at least 2/3 of the votes must be positive to
+carry out the proposed action (fractions of a vote rounded up to the nearest
+integer).</p>
+<h2><a class="anchor" aria-hidden="true" id="current-steering-council"></a><a href="#current-steering-council" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Current Steering Council</h2>
+<p>Names are followed by GitHub usernames.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/code-of-conduct"><span class="arrow-prev">← </span><span>Code Of Conduct</span></a><a class="docs-next button" href="/docs/terms-of-service"><span>Terms of Service</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#map3-governance">Map3 Governance</a><ul class="toc-headings"><li><a href="#the-project">The Project</a></li><li><a href="#governance">Governance</a></li><li><a href="#steering-council">Steering Council</a></li><li><a href="#council-membership">Council Membership</a></li><li><a href="#conflict-of-interest">Conflict of interest</a></li><li><a href="#private-communications-of-the-council">Private communications of the Council</a></li><li><a href="#subcommittees">Subcommittees</a></li><li><a href="#changing-the-governance-documents">Changing the Governance Documents</a></li></ul></li><li><a href="#current-steering-council">Current Steering Council</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="Map3" width="66" height="58"/></a><div><a href="https://github.com/hyperion-hyn/map3">GitHub</a><a href="https://github.com/hyperion-hyn/map3/issues">Issues</a></div></section><section class="copyright">Copyright © 2019 Hyperion</section></footer></div></body></html>

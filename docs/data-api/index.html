@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Data API · Map3</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Map3 provides a unified URI pattern for accessing map resources&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Data API · Map3"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.map3.network//"/><meta property="og:description" content="&lt;p&gt;Map3 provides a unified URI pattern for accessing map resources&lt;/p&gt;
+"/><meta property="og:image" content="https://www.map3.network/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.map3.network/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="Map3"/><h2 class="headerTitleWithLogo">Map3</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/what-is" target="_self">About</a></li><li class="siteNavGroupActive"><a href="/docs/install" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Service User</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Operator</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/install">Install</a></li><li class="navListItem"><a class="navItem" href="/docs/cli">CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/deploy-docker">Deploy with Docker</a></li><li class="navListItem"><a class="navItem" href="/docs/deploy-ali">Deploy on AliCloud</a></li><li class="navListItem"><a class="navItem" href="/docs/deploy-aws">Deploy on AWS</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Service User</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/data-api">Data API</a></li><li class="navListItem"><a class="navItem" href="/docs/mapstore">Mapstore</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Content Provider</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/publish-map">Publish Map Content</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Developers</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/developers">Developing Map3</a></li><li class="navListItem"><a class="navItem" href="/docs/contributing">Contributing to Map3</a></li><li class="navListItem"><a class="navItem" href="/docs/release">Map3 Release Instructions</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/hyperion-hyn/map3/edit/master/docs/data-api.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Data API</h1></header><article><div><span><p>Map3 provides a unified URI pattern for accessing map resources</p>
+<p><a href="https://tile.map3.network/api/">https://tile.map3.network/api/</a>{version}/{map provider}/{map name}/{z}/{x}/{y}.{ext}</p>
+<h2><a class="anchor" aria-hidden="true" id="base-layer"></a><a href="#base-layer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Base Layer</h2>
+<p>Our pipeline combines multiple open geo data source (e.g. OpenStreetMap and OpenAddress).</p>
+<ul>
+<li>Average 30% smaller in size.</li>
+<li>Faster and better user experience for your customers.</li>
+<li>Weekly update of global data</li>
+<li>Flexible styling. Check our default styles or contact us to submit yours!</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="vector-tile"></a><a href="#vector-tile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vector Tile</h3>
+<p>Hyperion provides a lean vector tile layer with global coverage. The data is updated weekly.</p>
+<p>URL: <a href="https://tile.map3.network/api/v1/hyn/map3/1/1/1.pbf">https://tile.map3.network/api/v1/hyn/map3/1/1/1.pbf</a></p>
+<h2><a class="anchor" aria-hidden="true" id="third-party-data"></a><a href="#third-party-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Third Party Data</h2>
+<p>Third Party Open Source Data that are served through Map3 Network.</p>
+<h3><a class="anchor" aria-hidden="true" id="mapillary"></a><a href="#mapillary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mapillary</h3>
+<p>Mapillary is a leading open mapping provider with global coverage of street-view imagery.
+The Mapillary image layer is best used with MapillaryJS library to provide navigation features
+of image sequences. For more details please also refer to <a href="https://www.mapillary.com/developer/tiles-documentation">https://www.mapillary.com/developer/tiles-documentation</a></p>
+<p>URL: <a href="https://tile.map3.network/api/v0.1/mapillary/sequence_layer/1/1/1.mvt">https://tile.map3.network/api/v0.1/mapillary/sequence_layer/1/1/1.mvt</a></p>
+<h3><a class="anchor" aria-hidden="true" id="nasa-earth-data"></a><a href="#nasa-earth-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>NASA Earth Data</h3>
+<p>To use base tiles offered on NASA Earth Data <a href="https://earthdata.nasa.gov/">https://earthdata.nasa.gov/</a></p>
+<p>Endpoint address:</p>
+<ul>
+<li><a href="https://tile.map3.network/api/v0.1/nasa/blue_marble/">https://tile.map3.network/api/v0.1/nasa/blue_marble/</a>{z}/{x}/{y}.jpeg</li>
+<li><a href="https://tile.map3.network/api/v0.1/nasa/true_color/">https://tile.map3.network/api/v0.1/nasa/true_color/</a>{z}/{x}/{y}.jpeg</li>
+<li><a href="https://tile.map3.network/api/v0.1/nasa/land_water/">https://tile.map3.network/api/v0.1/nasa/land_water/</a>{z}/{x}/{y}.png</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="authenticated-access-layer"></a><a href="#authenticated-access-layer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authenticated access layer</h2>
+<p>These layers require a JWT token issued by the map provider to access the content</p>
+<p>Just append the Jwt token to the URL as</p>
+<p><a href="https://tile.map3.network/api/">https://tile.map3.network/api/</a>{version}/{map provider}/{map name}/{z}/{x}/{y}.{ext}?token={jwt}</p>
+<p>You may contact map3@hyn.space to obtain the required JWT token.</p>
+<h3><a class="anchor" aria-hidden="true" id="wireless-base-station-coverage"></a><a href="#wireless-base-station-coverage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wireless base station coverage</h3>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/open-data"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/mapstore"><span>Mapstore</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#base-layer">Base Layer</a><ul class="toc-headings"><li><a href="#vector-tile">Vector Tile</a></li></ul></li><li><a href="#third-party-data">Third Party Data</a><ul class="toc-headings"><li><a href="#mapillary">Mapillary</a></li><li><a href="#nasa-earth-data">NASA Earth Data</a></li></ul></li><li><a href="#authenticated-access-layer">Authenticated access layer</a><ul class="toc-headings"><li><a href="#wireless-base-station-coverage">wireless base station coverage</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="Map3" width="66" height="58"/></a><div><a href="https://github.com/hyperion-hyn/map3">GitHub</a><a href="https://github.com/hyperion-hyn/map3/issues">Issues</a></div></section><section class="copyright">Copyright © 2019 Hyperion</section></footer></div></body></html>

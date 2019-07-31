@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Deploy Map3 Edge on AWS · Map3</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;strong&gt;Step1: Create an account and Key Pair&lt;/strong&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Deploy Map3 Edge on AWS · Map3"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.map3.network//"/><meta property="og:description" content="&lt;p&gt;&lt;strong&gt;Step1: Create an account and Key Pair&lt;/strong&gt;&lt;/p&gt;
+"/><meta property="og:image" content="https://www.map3.network/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.map3.network/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="Map3"/><h2 class="headerTitleWithLogo">Map3</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/what-is" target="_self">About</a></li><li class="siteNavGroupActive"><a href="/docs/install" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Operator</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Operator</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/install">Install</a></li><li class="navListItem"><a class="navItem" href="/docs/cli">CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/deploy-docker">Deploy with Docker</a></li><li class="navListItem"><a class="navItem" href="/docs/deploy-ali">Deploy on AliCloud</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/deploy-aws">Deploy on AWS</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Service User</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/data-api">Data API</a></li><li class="navListItem"><a class="navItem" href="/docs/mapstore">Mapstore</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Content Provider</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/publish-map">Publish Map Content</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Developers</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/developers">Developing Map3</a></li><li class="navListItem"><a class="navItem" href="/docs/contributing">Contributing to Map3</a></li><li class="navListItem"><a class="navItem" href="/docs/release">Map3 Release Instructions</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/hyperion-hyn/map3/edit/master/docs/deploy-aws.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Deploy Map3 Edge on AWS</h1></header><article><div><span><p><strong>Step1: Create an account and Key Pair</strong></p>
+<ul>
+<li>Create an account (Please follow AWS instructions)</li>
+<li>Sign in to AWS console</li>
+<li>Create key Pair
+<ul>
+<li>Choose your preferred country (region)
+<ul>
+<li><a href="https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#KeyPairs:sort=keyName">US East (Ohio)</a></li>
+<li><a href="https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#KeyPairs:sort=keyName">US East (N. Virginia)</a></li>
+<li><a href="https://us-west-1.console.aws.amazon.com/ec2/v2/home?region=us-west-1#KeyPairs:sort=keyName">US West (N. California)</a></li>
+<li><a href="https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#KeyPairs:sort=keyName">US West (Oregon)</a></li>
+<li><a href="https://ap-south-1.console.aws.amazon.com/ec2/v2/home?region=ap-south-1#KeyPairs:sort=keyName">Asia Pacific (Mumbai)</a></li>
+<li><a href="https://ap-northeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#KeyPairs:sort=keyName">Asia Pacific (Seoul)</a></li>
+<li><a href="https://ap-southeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-1#KeyPairs:sort=keyName">Asia Pacific (Singapore)</a></li>
+<li><a href="https://ap-southeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-2#KeyPairs:sort=keyName">Asia Pacific (Sydney)</a></li>
+<li><a href="https://ap-northeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-1#KeyPairs:sort=keyName">Asia Pacific (Tokyo)</a></li>
+<li><a href="https://ca-central-1.console.aws.amazon.com/ec2/v2/home?region=ca-central-1#KeyPairs:sort=keyName">Canada (Central)</a></li>
+<li><a href="https://eu-central-1.console.aws.amazon.com/ec2/v2/home?region=eu-central-1#KeyPairs:sort=keyName">EU (Frankfurt)</a></li>
+<li><a href="https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#KeyPairs:sort=keyName">EU (Ireland)</a></li>
+<li><a href="https://eu-west-2.console.aws.amazon.com/ec2/v2/home?region=eu-west-2#KeyPairs:sort=keyName">EU (London)</a></li>
+<li><a href="https://eu-west-3.console.aws.amazon.com/ec2/v2/home?region=eu-west-3#KeyPairs:sort=keyName">EU (Paris)   </a></li>
+<li><a href="https://eu-north-1.console.aws.amazon.com/ec2/v2/home?region=eu-north-1#KeyPairs:sort=keyName">EU (Stockholm)</a></li>
+<li><a href="https://sa-east-1.console.aws.amazon.com/ec2/v2/home?region=sa-east-1#KeyPairs:sort=keyName">South America (São Paulo)</a></li>
+</ul></li>
+<li>Click “Create key Pair” button in the page center to create your first key pair
+<img src="https://cdn-images-1.medium.com/max/1600/1*D26GBkbpgfWVZjd1q3UGHw.png" alt=""></li>
+<li>Create your own key pair name
+<img src="https://cdn-images-1.medium.com/max/1600/1*6Y3ivlLZpo1_QaQi_NphjQ.png" alt=""></li>
+<li>Click “Create Key Pair” button
+<ol>
+<li>The Browser will automatically download a key pair file, please save the file for future logins to Amazon Elastic Compute Cloud (EC2).</li>
+<li>File names may vary across different operational systems
+<img src="https://cdn-images-1.medium.com/max/1600/1*3pUkD6cttkm0aFY9b_-FsQ.png" alt=""></li>
+</ol></li>
+</ul></li>
+</ul>
+<p><strong>Step2: Deploy Map3 edge node</strong></p>
+<ul>
+<li><p>Click the following link to create new stack.</p>
+<ul>
+<li><a href="https://us-east-2.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">US East (Ohio)</a></li>
+<li><a href="https://us-east-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">US East (N. Virginia)</a></li>
+<li><a href="https://us-west-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">US West (N. California)</a></li>
+<li><a href="https://us-west-2.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">US West (Oregon)</a></li>
+<li><a href="https://ap-south-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">Asia Pacific (Mumbai)</a></li>
+<li><a href="https://ap-northeast-2.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">Asia Pacific (Seoul)</a></li>
+<li><a href="https://ap-southeast-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">Asia Pacific (Singapore)</a></li>
+<li><a href="https://ap-southeast-2.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">Asia Pacific (Sydney)</a></li>
+<li><a href="https://ap-northeast-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">Asia Pacific (Tokyo)</a></li>
+<li><a href="https://ap-east-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t3.micro&amp;param_SSHLocation=0.0.0.0/0">Asia Pacific (Hong Kong)</a></li>
+<li><a href="https://ca-central-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">Canada (Central)</a></li>
+<li><a href="https://eu-central-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">EU (Frankfurt)</a></li>
+<li><a href="https://eu-west-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">EU (Ireland)</a></li>
+<li><a href="https://eu-west-2.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">EU (London)</a></li>
+<li><a href="https://eu-west-3.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">EU (Paris)</a></li>
+<li><a href="https://eu-north-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t3.micro&amp;param_SSHLocation=0.0.0.0/0">EU (Stockholm)</a></li>
+<li><a href="https://sa-east-1.console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://s3-ap-southeast-1.amazonaws.com/hyn.static/cloud-formation/map3-edge-and-dashboard-cloud-formation.json&amp;stackName=map3-edge-dashboard&amp;param_InstanceType=t2.micro&amp;param_SSHLocation=0.0.0.0/0">South America (São Paulo)</a></li>
+</ul></li>
+<li><p>Specify Details. Fill in Stack name, select default InstanceType t2.micro (For Hong Kong or Stockholm region, choose 't3.micro'), and choose the keyname you used when creating key pair in the dropdown menu</p>
+<p>Users are recommend to choose ‘t2.micro’, which is a free usage tier.Per month, the AWS free usage tier covers: 750-hour usage and 15GB of bandwidth out aggregated across all AWS services. (Please check <a href="https://aws.amazon.com/ec2/instance-types/">AWS official websites</a> for more details about <strong>Free Usage Tier</strong>). <strong>When all information filled, click “Create” button to start creating the edge node.</strong>
+<img src="https://cdn-images-1.medium.com/max/1600/1*uqeOBPmQs2stSd-wZivOkg.png" alt=""></p></li>
+<li><p>You have now created an edge node. Wait <strong>2–3 minutes</strong> for the system to confirm.
+<img src="https://cdn-images-1.medium.com/max/1600/1*Y-6rlhXoublU1x38hNSKeQ.png" alt=""></p></li>
+<li><p>Check your edge node operation status by visiting the link below:<a href="https://console.aws.amazon.com/ec2/v2/home#Instances:sort=desc:instanceState">https://console.aws.amazon.com/ec2/v2/home#Instances:sort=desc:instanceState</a> Choose your preferred region if you need when opening the link above.
+Remember to obtain your public IP (you need <strong>Ipv4</strong> to view individual node Dashboard)
+<img src="https://cdn-images-1.medium.com/max/1600/1*_jh-kTTxVRbho7cxbDhyRA.png" alt=""></p></li>
+<li><p>The node is being prepared</p></li>
+<li><p>The node is in operation
+<img src="https://cdn-images-1.medium.com/max/1600/1*LN1hZvluj51ZMRJuhA2quA.png" alt=""></p></li>
+</ul>
+<p><strong>Tip. 1</strong> Enter you public IP(IPV4 ONLY) on your browser, you can see your own map node dashboard. The username and password for dashboard is “<strong>admin</strong>”</p>
+<p><strong>Tip. 2</strong> Once you deploy the node, you <strong>don’t</strong> have to always keep your computers live or AWS account logged in.</p>
+<p><strong>Tip. 3</strong> You can raise as many Map 3 notes as you wish as long as you follow the instruction above. But please note that Amazon might <strong>charge</strong> you for this as <strong>t2.micro</strong> has limited free usage and bandwidth.</p>
+<p><strong>Step3: How to delete a node</strong></p>
+<ul>
+<li>Click “<strong>Create Stack</strong>”dropdown menu, and choose delete Stack
+<img src="https://cdn-images-1.medium.com/max/1600/1*GnKXIreHYOOrP2rEC5U2gw.png" alt=""></li>
+<li>Click “<strong>Yes, Delete</strong>” to delete Stack
+<img src="https://cdn-images-1.medium.com/max/1600/1*k-4wfW2QNci3DUVVRPoOTQ.png" alt=""></li>
+<li>Confirm your status
+<img src="https://cdn-images-1.medium.com/max/1600/1*EoHdsWkCEXu0_7VwANeE6w.png" alt=""></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/deploy-ali"><span class="arrow-prev">← </span><span class="function-name-prevnext">Deploy on AliCloud</span></a><a class="docs-next button" href="/docs/open-data"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="Map3" width="66" height="58"/></a><div><a href="https://github.com/hyperion-hyn/map3">GitHub</a><a href="https://github.com/hyperion-hyn/map3/issues">Issues</a></div></section><section class="copyright">Copyright © 2019 Hyperion</section></footer></div></body></html>
