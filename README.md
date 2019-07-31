@@ -31,5 +31,7 @@ enhanced ouroboros
 https://github.com/hyperion-hyn/ouroboros
 
 ## mapbox gl failover
+
 a library to enable [mapbox-js](https://docs.mapbox.com/mapbox-gl-js/api/) to use map3 service network.
 
+https://github.com/hyperion-hyn/mapbox_gl_failover
