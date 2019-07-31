@@ -1,15 +1,15 @@
 # Projects
-Here is a list of projects involved in Hyperion.
+Here is a list of Map3 subprojects
 
 ## docker-map3
-a repository contains deployment files. one can build from source or deploy a map3 service node with these scripts.
+A script to deploy Map3 natively on linux. 
 
 https://github.com/hyperion-hyn/docker-map3/
 
 ## caddy
 a map3 service node program based on [caddy](https://github.com/caddyserver/caddy).
 
-It will enhanced with keyless, p2p, micropayment, integrity validation etc in the future.
+It will integrate keyless, p2p, micropayment, integrity validation and etc in the future.
 
 https://github.com/hyperion-hyn/caddy
 
@@ -20,13 +20,13 @@ https://github.com/hyperion-hyn/caddy-cron
 
 ## getstat
 
-a program to analyze access log and put requests number and geodata into influxdb.
+analyze access logs and ingest results into influxdb.
 
 https://github.com/hyperion-hyn/geostat
 
 ## ouroboros
 
-enhanced ouroboros
+Custom ouroboros to auto update Map3 nodes
 
 https://github.com/hyperion-hyn/ouroboros
 
