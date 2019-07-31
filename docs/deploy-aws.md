@@ -2,7 +2,7 @@
 id: deploy-aws
 title: Deploy Map3 Edge on AWS
 sidebar_label: Deploy on AWS
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/deploy-aws.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/deploy-aws.md
 ---
 
 **Step1: Create an account and Key Pair**

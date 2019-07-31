@@ -2,7 +2,7 @@
 id: deploy-docker
 title: Deploy Map3 Edge With Docker
 sidebar_label: Deploy with Docker
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/deploy-docker.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/deploy-docker.md
 ---
 
 We keep Docker images with recent snapshot builds from the `master` branch on DockerHub. `map3/edge` is a light weight version that operates only the minimal functionalities of a map3 edge node. `map3/edge-dashboard` starts additional grafana and influxdb locally to provide node operators visibility on their nodes.

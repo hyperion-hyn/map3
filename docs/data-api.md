@@ -2,7 +2,7 @@
 id: data-api
 title: Data API
 sidebar_label: Data API
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/data-api.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/data-api.md
 ---
 
 Map3 provides a unified URI pattern for accessing map resources

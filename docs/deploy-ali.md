@@ -2,7 +2,7 @@
 id: deploy-ali
 title: Deploy Map3 Edge on AliCloud
 sidebar_label: Deploy on AliCloud
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/deploy-ali.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/deploy-ali.md
 ---
 
 **Step1: Create an account**

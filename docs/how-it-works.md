@@ -2,7 +2,7 @@
 id: how-it-works
 title: How Map3 Works
 sidebar_label: How Map3 Works
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/how-it-works.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/how-it-works.md
 ---
 
 ## Overall Description. 

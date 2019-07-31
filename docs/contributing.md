@@ -2,7 +2,7 @@
 id: contributing
 title: Contributing to Map3
 sidebar_label: Contributing to Map3
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/contributing.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/contributing.md
 ---
 From opening a bug report to issuing a pull request, every contribution is
 much appreciated and welcomed. If you are planning to implement a new feature or
@@ -41,8 +41,8 @@ the [core development document](developers.md).
 
 ## Improving Documentation
 
-All documentations of the Map3 project are stored under the [docs](https://github.com/hyperion-hyn/map3/edit/website/docs)
-folder under the website branch on GitHub. Help us improve the documentations by submitting a 
+All documentations of the Map3 project are stored under the [docs](https://github.com/hyperion-hyn/map3/edit/master/docs)
+folder under the master branch on GitHub. Help us improve the documentations by submitting a 
 [Pull Request](https://github.com/hyperion-hyn/map3/pulls)
 
 ## <a name="submit-pr"></a> Pull Request Submission Guidelines

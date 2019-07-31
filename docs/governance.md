@@ -2,7 +2,7 @@
 id: governance
 title: Governance
 sidebar_label: Governance
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/governance.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/governance.md
 ---
 
 This document aims to clarify how decisions of Map3 are made and how various

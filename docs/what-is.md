@@ -2,7 +2,7 @@
 id: what-is
 title: Map Chronology
 sidebar_label: Map Chronology
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/what-is.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/what-is.md
 ---
 ## Origin and History
 The name Map3 refers to the 3rd generation of maps and also the map for the Web3 movements. Map has evolved substantially over the last two decades, broadly along the line of **map data** and **map service**. Here we version the map primarily based on the dominant paradigm of these two dimensions. The general trend is that map is becoming increasingly more decentralized.

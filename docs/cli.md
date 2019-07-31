@@ -2,7 +2,7 @@
 id: cli
 title: CLI
 sidebar_label: CLI
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/cli.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/cli.md
 ---
 
 ## Executables

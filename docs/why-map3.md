@@ -2,7 +2,7 @@
 id: why-map3
 title: Map3 Vision
 sidebar_label: Map3 Vision
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/why-map3.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/why-map3.md
 ---
 
 ## The "One Free Map" vision

@@ -2,7 +2,7 @@
 id: code-of-conduct
 title: Code Of Conduct
 sidebar_label: Code Of Conduct
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/code-of-conduct.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/code-of-conduct.md
 ---
 ### Overview
 

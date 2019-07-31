@@ -2,7 +2,7 @@
 id: install
 title: Install
 sidebar_label: Install
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/install.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/install.md
 ---
 
 ## Build from source

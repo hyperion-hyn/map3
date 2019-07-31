@@ -2,7 +2,7 @@
 id: faq
 title: FAQ
 sidebar_label: FAQ
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/faq.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/faq.md
 ---
 
 Contact us if you want to

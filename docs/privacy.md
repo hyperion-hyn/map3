@@ -2,7 +2,7 @@
 id: privacy
 title: Privacy
 sidebar_label: Privacy
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/privacy.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/privacy.md
 ---
 
 This Privacy Policy applies to our websites, APIs or other online services (collectively, our “Services”), including third-party products and services that integrate with our Services.

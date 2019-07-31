@@ -2,7 +2,7 @@
 id: terms-of-service
 title: Terms of Service
 sidebar_label: Terms of Service
-custom_edit_url: https://github.com/hyperion-hyn/map3/edit/website/docs/terms-of-service.md
+custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/terms-of-service.md
 ---
 ## Map3 APIs
 The “Map3 APIs” includes the Maps API, Styles API, Static API and Tileset API. You must access and use map tiles, static map images, style files, glyphs, and sprites that we provide to you (collectively "Map Assets”) only through our APIs.
