@@ -61,7 +61,7 @@ const testimonials = [
 
 const siteConfig = {
   title: 'Map3', // Title for your website.
-  tagline: 'Decentralized Map Network.',
+  tagline: 'Decentralized Map Network',
     cname: "www.map3.network",
   url: 'https://www.map3.network/', // Your website URL
   baseUrl: '/', // Base URL for your project */
