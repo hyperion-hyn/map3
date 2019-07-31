@@ -9,30 +9,41 @@ Map3 provides a unified URI pattern for accessing map resources
 
 https://tile.map3.network/api/{version}/{map provider}/{map name}/{z}/{x}/{y}.{ext}
 
-## Base Layer
+## Free access layers
 
-Our pipeline combines multiple open geo data source (e.g. OpenStreetMap and OpenAddress).
+### Base Vector Map layer
+
+Hyperion maintains a pipeline to generate a lean global set of vector tiles combining multiple data sources (e.g. OpenStreetMap and OpenAddress).
 * Average 30% smaller in size. 
 * Faster and better user experience for your customers.
 * Weekly update of global data
 * Flexible styling. Check our default styles or contact us to submit yours!
 
-### Vector Tile
-Hyperion provides a lean vector tile layer with global coverage. The data is updated weekly. 
+Statistics of the vector map:
+* Num of POI
+23,664,889
+* Num of building
+360,630,105
+* Area of building
+6.06577e+10 m2
+* Area of landuse
+1.83446e+12m2
+* Num of transportation line/ways (highway + railway + aerial way + shipping line)
+137,107,925
 
 URL: https://tile.map3.network/api/v1/hyn/map3/1/1/1.pbf
 
-## Third Party Data
+### Third Party Data
 Third Party Open Source Data that are served through Map3 Network.
 
-### Mapillary
+#### Mapillary
 Mapillary is a leading open mapping provider with global coverage of street-view imagery. 
 The Mapillary image layer is best used with MapillaryJS library to provide navigation features 
 of image sequences. For more details please also refer to https://www.mapillary.com/developer/tiles-documentation
 
 URL: https://tile.map3.network/api/v0.1/mapillary/sequence_layer/1/1/1.mvt
 
-### NASA Earth Data
+#### NASA Earth Data
 To use base tiles offered on NASA Earth Data https://earthdata.nasa.gov/
 
 Endpoint address:
@@ -48,5 +59,3 @@ Just append the Jwt token to the URL as
 https://tile.map3.network/api/{version}/{map provider}/{map name}/{z}/{x}/{y}.{ext}?token={jwt}
 
 You may contact map3@hyn.space to obtain the required JWT token.
-
-### wireless base station coverage
