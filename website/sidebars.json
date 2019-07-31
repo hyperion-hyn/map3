@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Technical Details": [],
+    "Technical Details": ["how-it-works"],
     "Operator": ["install", "cli", "deploy-docker", "deploy-ali", "deploy-aws"],
     "Service User": ["open-data", "data-api", "mapstore"],
     "Content Provider": ["publish-map"],
