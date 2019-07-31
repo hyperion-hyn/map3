@@ -19,7 +19,7 @@ custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/deploy-aw
         * [Asia Pacific (Singapore)](https://ap-southeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-1#KeyPairs:sort=keyName)
         * [Asia Pacific (Sydney)](https://ap-southeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-2#KeyPairs:sort=keyName)
         * [Asia Pacific (Tokyo)](https://ap-northeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-1#KeyPairs:sort=keyName)
-        * [Asia Pacific (Hong Kong)](https://ap-east-1.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-1#KeyPairs:sort=keyName)
+        * [Asia Pacific (Hong Kong)](https://ap-east-1.console.aws.amazon.com/ec2/v2/home?region=ap-east-1#KeyPairs:sort=keyName)
         * [Canada (Central)](https://ca-central-1.console.aws.amazon.com/ec2/v2/home?region=ca-central-1#KeyPairs:sort=keyName)
         * [EU (Frankfurt)](https://eu-central-1.console.aws.amazon.com/ec2/v2/home?region=eu-central-1#KeyPairs:sort=keyName)
         * [EU (Ireland)](https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#KeyPairs:sort=keyName)
@@ -27,7 +27,7 @@ custom_edit_url: https://github.com/hyperion-hyn/map3/edit/master/docs/deploy-aw
         * [EU (Paris)	](https://eu-west-3.console.aws.amazon.com/ec2/v2/home?region=eu-west-3#KeyPairs:sort=keyName)
         * [EU (Stockholm)](https://eu-north-1.console.aws.amazon.com/ec2/v2/home?region=eu-north-1#KeyPairs:sort=keyName)
         * [South America (São Paulo)](https://sa-east-1.console.aws.amazon.com/ec2/v2/home?region=sa-east-1#KeyPairs:sort=keyName)
-        * [Middle East (Bahrain)](https://me-south-1.console.aws.amazon.com/ec2/v2/home?region=sa-east-1#KeyPairs:sort=keyName)
+        * [Middle East (Bahrain)](https://me-south-1.console.aws.amazon.com/ec2/v2/home?region=me-south-1#KeyPairs:sort=keyName)
     * Click “Create key Pair” button in the page center to create your first key pair
     ![](https://cdn-images-1.medium.com/max/1600/1*D26GBkbpgfWVZjd1q3UGHw.png)
     * Create your own key pair name
