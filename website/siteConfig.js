@@ -43,6 +43,22 @@ const contents = [
     },
 ];
 
+const testimonials = [
+    {
+        content: "Map3 has the potential to challenge the map space. The disruption is already there",
+        author: "Arunesh Mishra",
+        source: "founder of Picolo Lab, ex technical lead of Google Location"
+    },{
+        content: "A promising decentralized network for maps. Right vision, right technology",
+        author: "Lianghong Fei",
+        source: "AWS chief technology advisor"
+    },{
+        content: "Building on the empowered edge is the right direction for Map3. A decentralized and consensus driven network of edges can bring new paradigm to maps",
+        author: "Zhi Wang",
+        source: "General Manager of JD Cloud"
+    }
+];
+
 const siteConfig = {
   title: 'Map3', // Title for your website.
   tagline: 'Decentralized Map Network.',
@@ -71,6 +87,7 @@ const siteConfig = {
   // If you have users set above, you add it here:
   users,
   contents,
+  testimonials,
 
   /* path to images for header/footer */
   headerIcon: 'img/favicon.ico',
@@ -79,8 +96,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#6C6B74',
-    secondaryColor: '#4F1D7C',
+    primaryColor: '#6f3daa',
+    secondaryColor: '#999999',
   },
 
   /* Custom fonts for website */

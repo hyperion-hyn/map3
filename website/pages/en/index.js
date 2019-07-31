@@ -14,7 +14,6 @@ const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
 /* Map3 Components */
-// const Carousel = require(`${process.cwd()}/core/Carousel.js`);
 
 class Index extends React.Component {
     render() {
@@ -160,7 +159,7 @@ class Index extends React.Component {
                 ));
 
             return (
-                <div className="productShowcaseSection">
+                <div className="productShowcaseSection darkBackground">
                     <h2>Who's Using This?</h2>
                     <p>This project is used by all these people</p>
                     <div className="logos">{showcase}</div>
@@ -173,13 +172,35 @@ class Index extends React.Component {
             );
         };
 
+        const Testimonial = () => {
+            if ((siteConfig.testimonials || []).length === 0) {
+                return null;
+            }
+
+            const testimonials = siteConfig.testimonials
+                .map(testimonial => (
+                    <span>
+                        <strong className="author">{testimonial.author}, </strong>
+                        <small className="source">{testimonial.source}</small>
+                        <p className="content">{testimonial.content}</p>
+                    </span>
+                ));
+
+            return (
+                <div className="testimonialSection">
+                    <h2>Testimonials from Partners and Advisors</h2>
+                    <div>{testimonials}</div>
+                </div>
+            )
+        };
+
         return (
             <div>
                 <HomeSplash language={language}/>
                 <div className="mainContainer">
                     <Tldr/>
                     <Experience/>
-                    {/*<Carousel/>*/}
+                    <Testimonial/>
                     <Showcase/>
                 </div>
             </div>
