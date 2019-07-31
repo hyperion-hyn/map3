@@ -45,7 +45,8 @@ All documentations of the Map3 project are stored under the [docs](https://githu
 folder under the master branch on GitHub. Help us improve the documentations by submitting a 
 [Pull Request](https://github.com/hyperion-hyn/map3/pulls)
 
-## <a name="submit-pr"></a> Pull Request Submission Guidelines
+<a name="submit-pr"></a>
+## Pull Request Submission Guidelines
 Before you submit your pull request, first consider the following guideline:
 - Search [GitHub](https://github.com/hyperion-hyn/map3/pulls) for an open or closed
 Pull Request that relates to your submission. You don't want to duplicate effort.
