@@ -124,21 +124,21 @@ class Index extends React.Component {
                             imageAlign: 'left',
                             imageLink: `${baseUrl}docs/data-api.html`,
                             title: 'Use Map3 Service',
-                            content: 'Tile service through api and sdk.',
+                            content: 'Use with your familiar API/SDK',
                         },
                         {
                             image: `${baseUrl}img/network.png`,
                             imageAlign: 'left',
-                            imageLink: `${baseUrl}docs/deploy-docker.html`,
+                            imageLink: `${baseUrl}docs/install.html`,
                             title: 'Host a Node',
-                            content: 'Host an edge node of Map3.',
+                            content: 'Host a Map3 node',
                         },
                         {
                             image: `${baseUrl}img/passion.png`,
                             imageAlign: 'left',
                             imageLink: `${baseUrl}docs/publish-map.html`,
-                            title: 'Provide Map Content',
-                            content: 'Contribute to Map3 data content.',
+                            title: 'Provide Map Contents',
+                            content: 'Publish your map contents',
                         },
                     ]}
                 </Block>
