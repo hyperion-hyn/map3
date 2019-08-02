@@ -1,5 +1,5 @@
 # Projects
-Here is a list of Map3 subprojects
+Here is a list of Map3 subprojects and some other custome modules to make it work.  
 
 ## docker-map3
 A script to deploy Map3 natively on linux. 
