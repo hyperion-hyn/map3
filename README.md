@@ -1,4 +1,4 @@
-Map3 is a decentralized map network which is impartial, secure and extremely robust, so that it is impractical to shut down just like the BitTorrent and the Bitcoin network. Map3 is free from control, free to participate, free base map.
+Map3 is a decentralized map network which is **impartial**, **secure** and **extremely robust**, so that it is impractical to shut down just like the BitTorrent and the Bitcoin network. Map3 is **free from control**, **free to participate**, **free base map**.
 
 https://www.map3.network/
 
