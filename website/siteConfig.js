@@ -81,6 +81,7 @@ const siteConfig = {
     {doc: 'what-is', label: 'About'},
     {doc: 'install', label: 'Docs'},
     {page: 'help', label: 'Help'},
+      {blog: true, label: 'Blog'},
     // {blog: false, label: 'Blog'},
   ],
 
