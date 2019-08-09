@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Map3 Blog</title>
+        <link>https://www.map3.network//blog</link>
+        <description>The best place to stay up-to-date with the latest Map3 news and events.</description>
+        <lastBuildDate>Fri, 09 Aug 2019 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Map3 Blog</title>
+            <url>https://www.map3.network//img/favicon.ico</url>
+            <link>https://www.map3.network//blog</link>
+        </image>
+        <copyright>Copyright © 2019 Hyperion</copyright>
+        <item>
+            <title><![CDATA[Map3 edge next major projects]]></title>
+            <link>https://www.map3.network//blog/2019/08/09/map3-edge-next-major-project.html</link>
+            <guid>https://www.map3.network//blog/2019/08/09/map3-edge-next-major-project.html</guid>
+            <pubDate>Fri, 09 Aug 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>One of our next major projects is to enable Map3 to run on NAS systems.</p> ]]></description>
+        </item>
+    </channel>
+</rss>
