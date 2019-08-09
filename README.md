@@ -42,3 +42,9 @@ https://github.com/hyperion-hyn/ouroboros
 a library to enable [mapbox-js](https://docs.mapbox.com/mapbox-gl-js/api/) to use map3 service network.
 
 https://github.com/hyperion-hyn/mapbox_gl_failover
+
+# <a name="coc"></a> Code of Conduct
+Please read and follow our [Code of Conduct][coc].
+
+[coc]: https://github.com/hyperion-hyn/map3/blob/master/CODE_OF_CONDUCT.md
+
