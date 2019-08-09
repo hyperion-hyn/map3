@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Decentralized Map Network.",
+    "tagline": "Decentralized Map Network",
     "docs": {
       "cli": {
         "title": "CLI",
@@ -89,7 +89,8 @@
     "links": {
       "About": "About",
       "Docs": "Docs",
-      "Help": "Help"
+      "Help": "Help",
+      "Blog": "Blog"
     },
     "categories": {
       "Technical Details": "Technical Details",
