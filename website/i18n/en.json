@@ -61,6 +61,10 @@
         "title": "Mapstore",
         "sidebar_label": "Mapstore"
       },
+      "p2p-network": {
+        "title": "P2P Network",
+        "sidebar_label": "P2P Network"
+      },
       "privacy": {
         "title": "Privacy",
         "sidebar_label": "Privacy"
