@@ -18,6 +18,7 @@
 <url> <loc>https://www.map3.network/docs/how-it-works</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/docs/how-it-works" /> </url>
 <url> <loc>https://www.map3.network/docs/install</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/docs/install" /> </url>
 <url> <loc>https://www.map3.network/docs/mapstore</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/docs/mapstore" /> </url>
+<url> <loc>https://www.map3.network/docs/p2p-network</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/docs/p2p-network" /> </url>
 <url> <loc>https://www.map3.network/docs/privacy</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/docs/privacy" /> </url>
 <url> <loc>https://www.map3.network/docs/publish-map</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/docs/publish-map" /> </url>
 <url> <loc>https://www.map3.network/docs/release</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/docs/release" /> </url>
