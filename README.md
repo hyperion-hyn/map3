@@ -46,5 +46,8 @@ https://github.com/hyperion-hyn/mapbox_gl_failover
 # <a name="coc"></a> Code of Conduct
 Please read and follow our [Code of Conduct][coc].
 
-[coc]: https://github.com/hyperion-hyn/map3/blob/master/CODE_OF_CONDUCT.md
+# <a name="develop"></a> Development
+Set up development environment to build and test. [Development][develop]
 
+[coc]: https://github.com/hyperion-hyn/map3/blob/master/CODE_OF_CONDUCT.md
+[develop]: https://github.com/hyperion-hyn/map3/blob/master/DEVELOPERS.md
