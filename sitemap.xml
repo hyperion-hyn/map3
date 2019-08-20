@@ -4,7 +4,6 @@
 <url> <loc>https://www.map3.network/index</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/en/index" /> </url>
 <url> <loc>https://www.map3.network/users</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/en/users" /> </url>
 <url> <loc>https://www.map3.network/blog/2019/08/20/deploy-map3-on-alicloud-and-aws</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://www.map3.network/blog/2019/08/09/map3-edge-next-major-project</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://www.map3.network/docs/cli</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/docs/cli" /> </url>
 <url> <loc>https://www.map3.network/docs/code-of-conduct</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/docs/code-of-conduct" /> </url>
 <url> <loc>https://www.map3.network/docs/contributing</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.map3.network/docs/contributing" /> </url>
