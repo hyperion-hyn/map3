@@ -4,7 +4,7 @@
         <title>Map3 Blog</title>
         <link>https://www.map3.network//blog</link>
         <description>The best place to stay up-to-date with the latest Map3 news and events.</description>
-        <lastBuildDate>Fri, 09 Aug 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 20 Aug 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://www.map3.network//blog</link>
         </image>
         <copyright>Copyright © 2019 Hyperion</copyright>
+        <item>
+            <title><![CDATA[You can deploy Map3 on AliCloud and AWS now]]></title>
+            <link>https://www.map3.network//blog/2019/08/20/deploy-map3-on-alicloud-and-aws.html</link>
+            <guid>https://www.map3.network//blog/2019/08/20/deploy-map3-on-alicloud-and-aws.html</guid>
+            <pubDate>Tue, 20 Aug 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Using a cloud platform is an easy way for you run a node on the network. Once you set it up you don’t need to keep your computer on. It is flexible and versatile; it can be controlled with any devices in any location that is accessible to the interne...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[Map3 edge next major projects]]></title>
             <link>https://www.map3.network//blog/2019/08/09/map3-edge-next-major-project.html</link>
