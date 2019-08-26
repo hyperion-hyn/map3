@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "Decentralized Map Network",
     "docs": {
+      "changelog": {
+        "title": "Changelog",
+        "sidebar_label": "Changelog"
+      },
       "cli": {
         "title": "CLI",
         "sidebar_label": "CLI"
