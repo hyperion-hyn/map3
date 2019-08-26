@@ -4,7 +4,7 @@
     "Operator": ["install", "deploy-ali", "deploy-aws"],
     "Service User": ["open-data", "data-api", "mapstore"],
     "Content Provider": ["publish-map"],
-    "Developers": ["contributing", "release"]
+    "Developers": ["contributing", "release", "changelog"]
   },
   "about":{
     "About": ["what-is", "why-map3"],
