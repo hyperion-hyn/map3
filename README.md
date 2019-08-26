@@ -21,6 +21,13 @@ It will integrate keyless, p2p, micropayment, integrity validation and etc in th
 
 https://github.com/hyperion-hyn/caddy
 
+## caddy-plugins
+a plugin repository for caddy
+
+https://github.com/hyperion-hyn/caddy-plugins
+
+* **keyless**  make caddy support keyless, include client and server. For more details on keyless see [Keyless SSL](https://www.cloudflare.com/ssl/keyless-ssl/) .
+
 ## caddy-cron
 a plugin for caddy to support time-based job schedule.
 
