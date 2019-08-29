@@ -1,7 +1,7 @@
 {
   "docs": {
     "Technical Details": ["how-it-works", "p2p-network"],
-    "Operator": ["install", "deploy-ali", "deploy-aws"],
+    "Operator": ["install", "deploy-ali", "deploy-aws", "deploy-docker"],
     "Service User": ["open-data", "data-api", "mapstore"],
     "Content Provider": ["publish-map"],
     "Developers": ["contributing", "release", "changelog"]
