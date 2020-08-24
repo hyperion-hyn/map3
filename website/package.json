@@ -12,7 +12,7 @@
     "docusaurus": "^1.12.0"
   },
   "dependencies": {
-    "dot-prop": ">=4.2.1",
+    "dot-prop": ">=5.1.1",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.19",
     "nuka-carousel": "^4.5.9",
