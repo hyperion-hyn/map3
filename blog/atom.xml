@@ -2,20 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.map3.network//blog</id>
     <title>Map3 Blog</title>
-    <updated>2019-08-20T06:00:00Z</updated>
-    <generator>Feed for Node.js</generator>
+    <updated>2019-08-20T06:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.map3.network//blog"/>
     <subtitle>The best place to stay up-to-date with the latest Map3 news and events.</subtitle>
     <logo>https://www.map3.network//img/favicon.ico</logo>
-    <rights>Copyright © 2019 Hyperion</rights>
+    <rights>Copyright © 2020 Hyperion</rights>
     <entry>
         <title type="html"><![CDATA[You can deploy Map3 on AliCloud and AWS now]]></title>
         <id>https://www.map3.network//blog/2019/08/20/deploy-map3-on-alicloud-and-aws.html</id>
-        <link href="https://www.map3.network//blog/2019/08/20/deploy-map3-on-alicloud-and-aws.html">
-        </link>
-        <updated>2019-08-20T06:00:00Z</updated>
+        <link href="https://www.map3.network//blog/2019/08/20/deploy-map3-on-alicloud-and-aws.html"/>
+        <updated>2019-08-20T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>Using a cloud platform is an easy way for you run a node on the network. Once you set it up you don’t need to keep your computer on. It is flexible and versatile; it can be controlled with any devices in any location that is accessible to the interne...</p>]]></summary>
         <author>
+            <name/>
         </author>
     </entry>
 </feed>

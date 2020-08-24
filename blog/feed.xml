@@ -5,14 +5,14 @@
         <link>https://www.map3.network//blog</link>
         <description>The best place to stay up-to-date with the latest Map3 news and events.</description>
         <lastBuildDate>Tue, 20 Aug 2019 06:00:00 GMT</lastBuildDate>
-        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-        <generator>Feed for Node.js</generator>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>Map3 Blog</title>
             <url>https://www.map3.network//img/favicon.ico</url>
             <link>https://www.map3.network//blog</link>
         </image>
-        <copyright>Copyright © 2019 Hyperion</copyright>
+        <copyright>Copyright © 2020 Hyperion</copyright>
         <item>
             <title><![CDATA[You can deploy Map3 on AliCloud and AWS now]]></title>
             <link>https://www.map3.network//blog/2019/08/20/deploy-map3-on-alicloud-and-aws.html</link>
