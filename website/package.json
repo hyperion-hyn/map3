@@ -17,7 +17,7 @@
     "lodash": "^4.17.19",
     "nuka-carousel": "^4.5.9",
     "postcss-selector-parser": "^3.1.2",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.25.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-slick": "^0.24.0",
